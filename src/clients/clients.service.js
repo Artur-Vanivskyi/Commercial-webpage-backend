@@ -1,7 +1,7 @@
 const knex = require("../db/connection");
 
 function list() {
-  return knex("clients").select("*")
+  return knex("clients").select("*").orderBy("full_name");
 }
 
 function create(client) {
